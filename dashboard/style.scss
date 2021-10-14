@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -28,6 +30,13 @@ body {
   list-style: none;
   font-size: 1.2em;
   font-weight: 300;
+  cursor: pointer;
+}
+
+@mixin hoverList {
+  color: $light-more;
+  cursor: pointer;
+  font-weight: 400;
 }
 
 @mixin icons {
@@ -94,4 +103,137 @@ h2 {
 .bodySection {
   margin-left: 20%;
   width: 80%;
+  nav {
+    background-color: $dark;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    height: 60px;
+    align-items: end;
+    h1 {
+      @include fonts;
+      font-weight: 700;
+      font-size: 2em;
+      margin-left: 3%;
+    }
+    i {
+      margin-right: 5px;
+      &.hambruger, &.smallOnly {
+        display: none;
+      }
+    }
+    li {
+      @include list;
+      display: inline;
+      margin-right: 20px;
+      &:hover {
+        @include hoverList;
+      }
+
+    }
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .infoSection {
+      img {
+        border-radius: 20px;
+        width: 90%;
+        display: block;
+        margin: auto;
+      }
+      &.cardsContainer {
+        display: block;
+        .cards {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          margin: 5% 0;
+          .card {
+            max-width: 18rem;
+            margin: 0 1%
+          }
+        }
+      }
+    }
+    .bigSection {
+      max-height: 600px;
+      margin-bottom: 10%;
+      img {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  margin-left: 20%;
+  width: 100%;
+  background-color: $dark-less;
+  p {
+    margin-left: 5%;
+    font-size: 1.2em;
+    &::after {
+      content: "\2764";
+      color: crimson;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .bodySection main .infoSection {
+    margin: 2% 0;
+      &.cardsContainer {
+        .cards {
+          .card {
+            max-width: 22rem;
+          }
+        }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .asideSection {
+    display: none;
+    width: 35%;
+    position: fixed;
+    background-color: $dark-less;
+    top: 5%;
+    z-index: 5;
+  }
+
+  .bodySection {
+    margin-left: 0;
+    width: 100%;
+    nav {
+      align-items: center;
+      i.hamburger, i.smallOlny {
+        @include icons;
+      }
+      ul {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        background-color: $dark;
+        right: 4%;
+        top: 7%;
+        text-align: end;
+        li {
+          padding: 3%;
+        }
+      }
+    }
+    main {
+      .bigSection img {
+        width: 90%;
+        display: block;
+        margin: auto;
+      }
+    }
+  }
 }
