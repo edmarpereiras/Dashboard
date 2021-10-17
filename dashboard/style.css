@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -15,13 +15,15 @@ body {
           flex-direction: column;
 }
 
-p, h1, h2 {
+p,
+h1,
+h2 {
   color: silver;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.8em;
   margin: 5%;
 }
 
@@ -73,12 +75,11 @@ h2 {
 
 .asideSection li {
   color: silver;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-decoration: none;
   list-style: none;
   font-size: 1.2em;
   font-weight: 300;
-  cursor: pointer;
   padding-top: 8%;
   margin-left: 3%;
 }
@@ -86,6 +87,12 @@ h2 {
 .asideSection li::before {
   content: "\25BD" "\2615";
   margin-right: 2%;
+}
+
+.asideSection li:hover {
+  color: #dbd8d8;
+  cursor: pointer;
+  font-weight: 400;
 }
 
 .bodySection {
@@ -114,7 +121,7 @@ h2 {
 
 .bodySection nav h1 {
   color: silver;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 2em;
   margin-left: 3%;
@@ -124,18 +131,17 @@ h2 {
   margin-right: 5px;
 }
 
-.bodySection nav i.hambruger, .bodySection nav i.smallOnly {
+.bodySection nav i.hamburger, .bodySection nav i.smallOnly {
   display: none;
 }
 
 .bodySection nav li {
   color: silver;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-decoration: none;
   list-style: none;
   font-size: 1.2em;
   font-weight: 300;
-  cursor: pointer;
   display: inline;
   margin-right: 20px;
 }
@@ -209,7 +215,7 @@ footer p {
 
 footer p::after {
   content: "\2764";
-  color: crimson;
+  color: red;
 }
 
 @media (max-width: 1280px) {
@@ -239,7 +245,8 @@ footer p::after {
         -ms-flex-align: center;
             align-items: center;
   }
-  .bodySection nav i.hamburger, .bodySection nav i.smallOlny {
+  .bodySection nav i.hamburger,
+  .bodySection nav i.smallOnly {
     display: block;
     color: darkgray;
     font-size: 1.5em;
@@ -265,6 +272,9 @@ footer p::after {
     width: 90%;
     display: block;
     margin: auto;
+  }
+  footer {
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

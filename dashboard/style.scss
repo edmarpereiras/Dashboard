@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +20,7 @@ body {
 
 @mixin fonts {
   color: $lighter;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 @mixin list {
@@ -30,7 +29,6 @@ body {
   list-style: none;
   font-size: 1.2em;
   font-weight: 300;
-  cursor: pointer;
 }
 
 @mixin hoverList {
@@ -47,12 +45,14 @@ body {
   cursor: pointer;
 }
 
-p, h1, h2 {
+p, 
+h1, 
+h2 {
   @include fonts;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.8em;
   margin: 5%;
 } 
 
@@ -97,6 +97,9 @@ h2 {
       content: "\25BD" "\2615";
       margin-right: 2%;
     }
+    &:hover {
+      @include hoverList;
+    }
   }
 }
 
@@ -119,7 +122,8 @@ h2 {
     }
     i {
       margin-right: 5px;
-      &.hambruger, &.smallOnly {
+      &.hamburger, 
+      &.smallOnly {
         display: none;
       }
     }
@@ -130,7 +134,6 @@ h2 {
       &:hover {
         @include hoverList;
       }
-
     }
   }
   main {
@@ -179,7 +182,7 @@ footer {
     font-size: 1.2em;
     &::after {
       content: "\2764";
-      color: crimson;
+      color: red;
     }
   }
 }
@@ -187,12 +190,12 @@ footer {
 @media (max-width: 1280px) {
   .bodySection main .infoSection {
     margin: 2% 0;
-      &.cardsContainer {
-        .cards {
-          .card {
-            max-width: 22rem;
-          }
+    &.cardsContainer {
+      .cards {
+        .card {
+          max-width: 22rem;
         }
+      }
     }
   }
 }
@@ -212,7 +215,8 @@ footer {
     width: 100%;
     nav {
       align-items: center;
-      i.hamburger, i.smallOlny {
+      i.hamburger, 
+      i.smallOnly {
         @include icons;
       }
       ul {
@@ -235,5 +239,8 @@ footer {
         margin: auto;
       }
     }
+  }
+  footer {
+    margin-left: 0;
   }
 }

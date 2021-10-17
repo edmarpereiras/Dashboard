@@ -1,8 +1,10 @@
 const panel = document.getElementById("panel");
-const list = document.getElementById("list");
-
 const panelBtn = document.getElementById("showPanel");
+
+const list = document.getElementById("list");
 const listBtn = document.getElementById("showList");
+
+const title = document.getElementById("title");
 
 panelBtn.onclick = function() {
     if(panel.style.display === "none") {
